@@ -1,0 +1,14 @@
+body {
+    padding: 20px;
+    margin: 20px;
+}
+
+.hide-me {
+    display: none;
+    visibility: hidden;
+}
+
+.show-me {
+    display: block;
+    visibility: visible;
+}
