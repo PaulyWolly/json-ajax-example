@@ -1,0 +1,29 @@
+Quick setup — if you’ve done this kind of thing before
+ Set up in Desktop	or	
+ HTTPS
+ SSH
+
+git@github.com:PaulyWolly/json-ajax-example.git
+
+We recommend every repository include a README, LICENSE, and .gitignore.
+…or create a new repository on the command line
+
+echo "# json-ajax-example" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:PaulyWolly/json-ajax-example.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin git@github.com:PaulyWolly/json-ajax-example.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+// After creating your new repository you will see a screen with options to add code.
+// This command will push your files up to the new repo
+
+>> git push https://github.com/PaulyWolly/json-ajax-example
+
+
