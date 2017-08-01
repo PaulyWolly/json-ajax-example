@@ -1,0 +1,74 @@
+// GIT Repositories (repos) - how to
+
+/* 
+Git allows you to create a monitored, versioned listing of your working files and tracks changes 
+locally, allowing you to upload to a remote repo creating a historical rendition of your files 
+where you can create versions of your files, where others can view your files or download and 
+modify as you have configured
+
+Git overview:
+Files are either: Untracked, Unmodified, Modified or Staged. In order to 'commit' your changes 
+to a repo, saving those changes as a revision, the file(s) that you are 'tracking' have to go 
+through a set of changes - from unmodified-to-modified, then moved from modified-to-staged. Once 
+you have a file or files in a 'staged' (or 'to be committed') state they can then be 'committed' 
+which moves them into the repo as needed giving a new version of the files listing.
+
+
+Untracked          Unmodified          Modified          Staged
+   |==Add a file========|==================|===============>|
+   |                    |==Edit a file====>|                |
+   |                    |                  |==Stage a file=>|
+   |<==Remove a file====|                  |                |
+   |                    |<=========Commit files(s)==========|
+   |                    |                  |                |
+
+'add' command can do a few things: 
+Moving a new file from untracked to tracked you would 'add' the file with" 'git add <filename>'
+Once you modify a file, to move the file from modified to staged you would 'add <filename>'
+
+Use 'git status'  to determine the status of your changes at any time
+
+IMPORTANT!!!!
+If you modify a file after you run 'git add', you have to run 'git add' AGAIN to stage the latest 
+version of the file
+
+*/
+
+/*
+
+Git scenarios 
+// Scenario 1: Adding a local repo to your local working environment
+- First go to https://github.com and log into your account. Create a new repository (remember name)
+- Create new local directory where your new files will be stored (naming the same as remote repo you just created)
+- Initilialize local repo 
+- Add files to your 'local repo' to monitor
+- Commit those changes locally
+- Push local changes to remote repo
+
+// Scenario 2: Clone a remote repo to your local environment
+- Go to remote repo in https://github.com and copy URL of project you wish to work with 
+- clone repo locally 
+- add files to monitor
+- commit changes locally
+- push local changes to remote repo
+*/
+
+// Clone a remote repo to your local environment wth: 'git clone [url](usually ends with .git)
+git clone https://github.com/PaulyWolly/json-ajax-example.git 
+
+// initializing a local git repo with: 'git init'
+git init
+
+// add files <you are monitoring> to a local git repo: git add <filename> -or- git add . //add everything changed
+git add .
+
+// commit changes to your local repo with: 'git commit -m "initial commit"'
+// before commit you must 'stage' your changes which is where you 'add'
+git commit -m ""
+
+// Add a shortname to your remote repo 
+git remote add <shortname> <url>
+
+// check the 'status' of your files at any time to see if they are unmodified, modified or staged
+// Anything untracked will not be a part of the repo
+
